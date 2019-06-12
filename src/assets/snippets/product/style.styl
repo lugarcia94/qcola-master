@@ -1,0 +1,124 @@
+.product
+    &__actions 
+        display: none 
+
+    &__header 
+        margin-bottom: 20px 
+        
+    &__link 
+        display: block 
+
+        &:hover
+            text-decoration: none
+
+    &__figure 
+        position: relative 
+        overflow: hidden 
+        width: 100%
+        height: 230px
+
+    &__image 
+        position: relative 
+        z-index: 10
+        display: block 
+        width: 100% 
+        height: 230px
+        object-fit: contain
+
+        + .product__image 
+            position: absolute
+            top: 0
+            left: 0 
+            z-index: 20
+            visibility: hidden
+            opacity: 0
+            transition: all .2s ease-in-out
+            transform: translate3d(0, -100%, 0)
+
+
+    &__review-small
+        margin-bottom: 15px
+        .rating-short__votes
+            display: none 
+
+    &__name 
+        .product__link
+            display: block 
+            height: 44px
+            overflow: hidden
+            font-size: 15px
+            font-weight: bold 
+            line-height: 1.5
+            color: #6A6F7B
+            text-transform: uppercase 
+            margin-bottom: 15px 
+
+    &__payment 
+        display: none 
+
+    &__button-buy 
+        position: relative
+        background: #51B177
+        width: 100% 
+        border-radius: 4px
+        font-size: 16px
+        font-weight: regular 
+        text-transform: uppercase 
+        letter-spacing: 2px
+        margin-top: 10px
+    &--page-product 
+        &:before 
+            content: ''
+            position: absolute 
+            right: -15px
+            top: -15px
+            left: -15px
+            bottom: -15px
+
+            background: #fff 
+            box-shadow: 0 0 20px rgba(0,0,0,.1)
+            opacity: 1
+            border-radius: 4px
+
+        .product 
+            &__name 
+                text-align: center 
+
+        .prices__container
+            flex-direction: column
+
+
+@media desktop 
+    .product
+        position: relative  
+
+        &:before 
+            content: ''
+            position: absolute 
+            right: -15px
+            top: -15px
+            left: -15px
+            bottom: -15px
+
+            background: #fff 
+            box-shadow: 0 0 20px rgba(0,0,0,.2)
+            opacity: 0
+            transition: all .2s ease-in-out
+            
+        &--page-product:before 
+            opacity: 1
+            box-shadow: 0 0 20px rgba(0,0,0,.1)
+
+        &__header, &__main, &__action
+            position: relative 
+            z-index: 2
+
+        &:hover 
+            .product
+                &__image 
+                    + .product__image 
+                        opacity: 1 
+                        visibility: visible 
+                        transform: none
+            &:before 
+                opacity: 1

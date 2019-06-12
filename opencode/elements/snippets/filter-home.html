@@ -1,0 +1,30 @@
+
+{% for category in categories %}
+{% if category.id in settings.categoryID %}
+<div class="filter-home">
+    <div class="filter-home__container">
+        <div class="filter-home__header">
+            <h3 class="filter-home__title">QCOLA COM A MAIOR VARIEDADE DE ADESIVOS E PAPÉIS DE PAREDE</h3>
+        </div>
+        <div class="filter-home__main">
+            <div class="filter-home__list">
+                {% for child in category.children %}
+                <div class="filter-home__item">
+                    <a href="{{ child.link }}" class="filter-home__link">
+                        <span class="filter-home__image">
+                            {% if child.images %}
+                            <img src="{{ child.images[0] }}" alt="{{ child.name }}">
+                            {% else %}
+                            <img src="https://fakeimg.pl/110x110/" alt="{{ child.name }}">
+                            {% endif %}
+                        </span>
+                        <span class="filter-home__label">{{ child.name }}</span>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}

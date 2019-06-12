@@ -1,0 +1,37 @@
+<header id="header" class="header">
+    <div class="header__container">
+        <div class="header__menu">
+            <button aria-controls="navigation" type="button" class="button button__menu">
+                {% element 'snippets/icon' { 'name': 'menu', 'width': '24', 'height': '20' } %}
+            </button>
+        </div>
+
+        <div class="header__logo">
+            {% element 'snippets/logo' %}
+        </div>
+
+        <div id="search-header" class="header__search">
+            {% element 'snippets/search' %}
+            <button aria-controls="search-header" type="button" class="button button__mask button__mask--search"></button>
+        </div>
+
+        <div class="header__service-center">
+            {% element 'snippets/service-center' { 'header': 'show' } %}
+        </div>
+
+        <div class="header__customer">
+            {% element 'snippets/customer' { modifier: 'header' } %}
+        </div>
+
+        <div class="header__button-search">
+            <button aria-controls="search-header" class="button button__search">
+                {% element 'snippets/icon' { 'name': 'search', 'width': '27', 'height': '27' } %}
+            </button>
+        </div>
+
+        <div class="header__minicart">
+            <div data-component="minicart"></div>
+        </div>
+    </div>
+    {% element 'navigation' %}
+</header>

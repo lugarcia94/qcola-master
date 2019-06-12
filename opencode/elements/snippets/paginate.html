@@ -1,0 +1,30 @@
+<div class="paginate">
+    <div class="paginate__container">
+        <div class="paginate__count">
+            {{ paginate.counter('Encontramos {:count} produto(s) em {:pages} p&aacute;gina(s)') }}
+        </div>
+        
+        {% if paginate.params.pageCount > 1 %}
+        <div class="paginate__pages">
+            {{ paginate.first('primeiro', {'class': 'paginate__link paginate__link--first'}) }}
+        
+            {% if paginate.hasPrev %}
+                {{ paginate.prev('anterior', {'class': 'paginate__link paginate__link--prev'}) }}
+            {% endif %}
+        
+            {{ paginate.numbers({
+                'modulus': 3,
+                'separator': '',
+                'class': 'paginate__link paginate__link--number bd-color-one',
+                'currentClass': 'paginate__link--current bd-color-one bg-color-one'
+            }) }}
+        
+            {% if paginate.hasNext %}
+                {{ paginate.next('proximo', {'class': 'paginate__link paginate__link--next'}) }}
+            {% endif %}
+
+            {{ paginate.last('ultimo', {'class': 'paginate__link paginate__link--last'}) }}
+        </div>
+        {% endif %}
+    </div>
+</div>

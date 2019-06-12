@@ -1,0 +1,253 @@
+/**
+ *  Theme Name: Taita
+ *  Theme URI:
+ *  Author: Auaha Developers
+ *  License: GNU General Public License v2 or later
+ *  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ *  Variaveis Padrões
+ */
+{% set color_one = settings.color_one %}
+{% set color_two = settings.color_two %}
+
+{% set button_bg = color_one %}
+{% set button_color = "#fff" %}
+{% set button_bg_hover = color_two %}
+{% set button_color_hover = "#fff" %}
+
+{% set calltoaction_bg = settings.button_call_to_action_bg %}
+{% set calltoaction_color = settings.button_call_to_action_color %}
+
+/**
+ * Class globals
+ */
+.color-one {
+    color: {{ color_one }};
+}
+.color-two {
+    color: {{ color_two }};
+}
+.bg-color-one {
+    background-color: {{ color_one }};
+}
+}
+.bg-color-two {
+    background-color: {{ color_two }};
+}
+.bd-color-one {
+    border-color: {{ color_one }};
+}
+.bd-color-two {
+    border-color: {{ color_two }};
+}
+
+.call-to-action-bg {
+    background: {{ calltoaction_bg }};
+}
+
+.call-to-action-color {
+    color: {{ calltoaction_color }};
+}
+
+/**
+ *  Scrollbar e Selection
+ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: {{ color_one }}
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: {{ color_two }};
+}
+
+::selection{
+    background          : {{ color_one }};
+    color               : #fff;
+}
+
+/**
+ * Buttons, Inputs, Title, Prices
+ */
+button {
+    background: {{ button_bg }};
+    color: {{ button_color }};
+}
+.button--menu {
+    color: {{ button_bg }};
+}
+
+.title, .prices__special {
+    color: {{ color_one }}
+}
+
+/**
+ *  Links 
+ */
+a {
+    color: {{ color_two }};
+}
+.head-top__welcome a,
+a:hover {
+    color: {{ color_one }};
+}
+
+/**
+ * Cart, Customer
+ */
+.customer--navigation {
+    background: {{ color_one }};
+    color: #fff;
+}
+
+.customer--navigation .customer__links a {
+    color: #fff;
+}
+
+.customer--navigation .customer__icon svg {
+    fill: #fff;
+}
+
+.customer--header .customer__icon svg {
+    fill: {{ color_one }};
+}
+
+/**
+ * Service Center
+ */
+.service-center__header .icon,
+.service-center__icon .icon {
+    fill: {{ color_one }};
+}
+.service-center__text {
+    color: {{ color_one }};
+}
+
+/**
+ * Head Top
+ */
+.head-top__welcome svg {
+    fill: {{ color_one }};
+}
+.head-top .socials__icon {
+    color: {{ color_one }};
+}
+
+
+/**
+ * Newsletter
+ */
+.newsletter--custom {
+    background: {{ color_one }};
+}
+
+.newsletter--custom .newsletter__button {
+    color: {{ color_one }};
+}
+
+
+/**
+ * Instagram
+ */
+
+.instagram__title {
+    color: {{ color_one }};
+}
+
+/**
+ * Header
+ */
+
+[data-scrolling-mode=down] .header {
+    border-color: {{ color_one }};
+}
+
+.suggestion {
+    border-color: {{ color_one }};
+}
+
+.suggestion-products strong, .suggestion-words strong {
+    background: {{ color_one }};
+    color: #fff;
+}
+
+
+/**
+ * Footer 
+ */
+
+.footer .socials__icon {
+    color: {{ color_one }};
+}
+
+/**
+ * Button
+ */
+.botao-commerce, .botao-comprar {
+    background: {{ calltoaction_bg }} !important;
+    color: {{ calltoaction_color }} !important;
+}
+.search__button svg,
+.button__search svg,
+.button__menu svg{
+    fill: {{ color_one }};
+}
+
+
+
+/**
+ * Desktop maior que 992px
+ */ 
+@media (min-width: 992px) {
+
+    /**
+    * Buttons e Inputs
+    */
+    button:hover {
+        background: {{ button_bg_hover }};
+        color: {{ button_color_hover }};
+    }
+
+    .button--menu:hover {
+        color: {{ button_bg_hover }};
+        background: none 
+    }
+
+    .customer__link--icon {
+        background: none;
+        color: {{ color_one }};
+    }
+
+    /**
+     *  Menu Navigation
+     */
+    .navigation {
+        background: {{ color_one }};
+    }
+
+    .menu--navigation .menu__item--nv1:hover .menu__link--nv1 {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu__link--nv2:hover {
+        box-shadow: inset 6px 0 0 {{ color_one }};
+    }
+
+    .menu--categories-all .menu__link--nv1 {
+        color: {{ color_one }};
+    }
+
+    /**
+     * Color background Home
+     */
+    .page-home body {
+        box-shadow: inset 0 600px 0 {{ color_one }};
+    }
+}

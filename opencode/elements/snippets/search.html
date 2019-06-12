@@ -1,0 +1,12 @@
+<div class="search">
+    <form class="search__form" role="form" action="{{ links.search }}" method="get" data-search="suggestion">
+        <input type="hidden" name="loja" value="{{ store.id }}" />
+        <input class="search__input" type="text" data-input="suggestion" placeholder="O que deseja procurar?" name="palavra_busca" tabindex="1" data-tray-tst="busca_palavra" required />
+        <button class="search__button" type="submit" tabindex="2" data-tray-tst="botao_buscar">
+            <i class="search__button-icon">
+                {% element 'snippets/icon' { 'name': 'search', 'width': '22', 'height': '22' } %}
+            </i>
+            <span class="search__button-label">Buscar</span>
+        </button>
+    </form>
+</div>

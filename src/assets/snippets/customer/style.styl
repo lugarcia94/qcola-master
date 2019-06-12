@@ -1,0 +1,62 @@
+.customer 
+    a:hover 
+        text-decoration: none
+
+    &__container 
+        display: flex 
+        align-items: center
+        margin: -(gutter/2) 0
+
+    &__main 
+        padding: (gutter/2) 0
+
+    &__label
+        a, span, &
+            font-size: 14px
+            font-weight: bold
+
+    &__link
+        a, & 
+            font-size: 14px
+            font-weight: regular
+
+    &__links 
+        svg 
+            fill: #fff
+        a 
+            font-size: 12px
+            font-weight: regular
+            color: #606062
+            letter-spacing: 1px
+
+    &__main 
+        flex: 1 
+        min-width: 0
+
+    &__link 
+        &--icon 
+            display: flex 
+            justify-content: center 
+            align-items: center
+            width: 45px
+            height: 45px 
+            border-radius: 3px
+
+    &--header 
+        .customer
+            &__main 
+                display: none 
+
+    &--navigation  
+        padding: 20px 0
+        border-bottom: solid 1px rgba(0,0,0,.1)
+
+        .customer__icon
+            margin-left: 5px
+
+@media desktop
+    .customer
+        &--header 
+            .customer
+                &__main
+                    display: block

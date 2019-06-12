@@ -1,0 +1,22 @@
+{
+    "current": {
+        "store": "https://parceiroauaha.commercesuite.com.br",
+        "structure": 1,
+        "color_one": "#4C989F",
+        "color_two": "#6A6F7B",
+        "button_bg": "#4C989F",
+        "button_color": "#fff",
+        "button_call_to_action_bg": "#51B177",
+        "button_call_to_action_color": "#fff",
+
+        "showcase": "top_seller",
+        "facebook": "traytecnologia",
+        "twitter": "@twitter",
+        "youtube": "traytecnologia",
+        "pinterest": "traytecnologia",
+        "instagram": "traytecnologia",
+        "blogger": "www.blogger.com.br",
+        "instaToken": "",
+        "extension_id": "177"
+    }
+}

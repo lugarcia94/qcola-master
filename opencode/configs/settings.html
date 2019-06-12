@@ -1,0 +1,337 @@
+<style>
+
+    #content_form_dinamic{
+        border-radius: 3px;
+        border: 1px solid #eee;
+        padding: 15px;
+    }
+
+    #form-content {
+        background: #f7f7f7 !important;
+    }
+
+    #form-content .form-group{
+        background: #fff;
+    }
+
+    #help-content{
+        display: none;
+    }
+
+    .space-title{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .panel-group {
+        margin-bottom: 15px;
+    }
+
+    .panel-group .panel-heading {
+        background: #f7f7f7;
+    }
+
+    .panel-group .panel-heading a{
+        color: #000;
+    }
+
+    .form-group h2 i{
+        float: left;
+        margin-right: 15px;
+    }
+
+    .form-group h2 b{
+        color: #000;
+        line-height: 40px;
+    }
+
+    .structures h4{
+        text-align: center;
+    }
+
+    .structures label{
+        display: block;
+        text-align: center;
+    }
+
+    .structures label:hover,
+    .structures input:hover{
+        cursor: pointer;
+    }
+
+    .structures img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .remove-bg{
+        cursor: pointer;
+    }
+
+    .row-social .input-group-addon{
+        line-height: 18px;
+        text-align: left;
+        width: 145px;
+    }
+
+    .row-social .input-group-addon svg{
+        display: inline-block;
+        border-radius: 3px;
+        vertical-align: top;
+    }
+
+    radio, label{
+        font-size: 1.5rem;
+    }
+    .collapse-title {
+        display: block;
+        text-decoration: none;
+    }
+    .collapse-title:hover {
+        text-decoration: none;
+    }
+</style>
+
+<fieldset>
+    <input type="hidden" id="store" name="store">
+    <input type="hidden" name="extension_id">
+
+    <!-- CORES -->
+    <div class="form-group">
+        <h2>
+            <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" width="40" height="40"><path fill="#AAAFAD" d="M460 268.025V401.04c0 11.047-8.954 20-20 20h-73.474l-3.118 3.113c-7.81 7.795-20.476 7.795-28.287 0l-3.11-3.112H20c-11.046 0-20-8.95-20-20V288.03c0-11.045 8.953-20 19.998-20H460z"/><path fill="#979B99" d="M460 268.025V401.04c0 11.047-8.954 20-20 20h-73.474l-3.118 3.113c-7.81 7.795-20.476 7.795-28.287 0l-3.11-3.112H306.9l-68.38-68.38v-42.31l.147.153v-42.47H460z"/><path fill="#C3C9C7" d="M443.543 344.184l-80.136 79.97c-7.81 7.795-20.476 7.795-28.287 0L86.326 175.874c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0l248.79 248.28c7.81 7.796 7.81 20.434 0 28.23z"/><path fill="#AAAFAD" d="M443.543 344.184l-80.136 79.97c-7.81 7.795-20.476 7.795-28.287 0L310 399.086l-20-19.96V221.87h59.264l94.28 94.084c7.81 7.796 7.81 20.434 0 28.23z"/><path fill="#D2D6D5" d="M306.667 401.042V270c0-11.046 8.954-20 20-20H440c11.046 0 20 8.954 20 20v131.042c0 11.046-8.954 20-20 20H326.667c-11.046 0-20-8.955-20-20z"/><path fill="#AAAFAD" d="M366.296 378.537c0 9.39-7.612 17.002-17.002 17.002h-.07c-9.39 0-17.002-7.62-17.002-17.01s7.612-17 17.002-17h.07c9.39 0 17.002 7.61 17.002 17z"/><path fill="#66646D" d="M357.778 378.537c0 4.695-3.814 8.5-8.52 8.5s-8.518-3.805-8.518-8.5 3.814-8.5 8.52-8.5 8.518 3.805 8.518 8.5z"/><path fill="#AAAFAD" d="M332.222 297.78c0-2.348 1.903-4.25 4.25-4.25h93.72c2.348 0 4.25 1.902 4.25 4.25 0 2.346-1.902 4.25-4.25 4.25h-93.72c-2.347 0-4.25-1.904-4.25-4.25zm0 17c0-2.347 1.903-4.25 4.25-4.25h93.72c2.348 0 4.25 1.903 4.25 4.25s-1.902 4.25-4.25 4.25h-93.72c-2.347 0-4.25-1.902-4.25-4.25z"/><path fill="#475E70" d="M0 401.042V288.026c0-11.046 8.954-20 20-20h218.52v153.016H20c-11.046 0-20-8.955-20-20z"/><path fill="#344A59" d="M238.52 268.025v84.635l-60-59.63v-25.006h60z"/><path fill="#65849B" d="M0 401.042V288.026c0-11.046 8.954-20 20-20h158.89v153.016H20c-11.046 0-20-8.955-20-20z"/><path fill="#344A59" d="M153.333 314.772v-16.984c0-2.352 1.907-4.26 4.26-4.26 2.35 0 4.258 1.908 4.258 4.26v16.984c0 2.352-1.9 4.26-4.25 4.26s-4.26-1.908-4.26-4.26z"/><path fill="#7FA3BA" d="M0 401.042V288.026c0-11.046 8.954-20 20-20h99.26v153.016H20c-11.046 0-20-8.955-20-20z"/><path fill="#65849B" d="M93.704 314.772v-16.984c0-2.352 1.907-4.26 4.26-4.26 2.35 0 4.258 1.908 4.258 4.26v16.984c0 2.352-1.907 4.26-4.26 4.26-2.35 0-4.258-1.908-4.258-4.26z"/><path fill="#95BDBF" d="M20 421.042c-11.046 0-20-8.954-20-20V288.026c0-11.046 8.954-20 20-20h39.63v153.016H20z"/><path fill="#7FA3BA" d="M34.074 314.772v-16.984c0-2.352 1.907-4.26 4.26-4.26 2.35 0 4.258 1.908 4.258 4.26v16.984c0 2.352-1.907 4.26-4.26 4.26-2.35 0-4.258-1.908-4.258-4.26z"/><path fill="#707F39" d="M349.264 221.87L240.84 330.07 86.327 175.873c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0L349.263 221.87z"/><path fill="#84994B" d="M307.1 179.793l-108.424 108.2-42.165-42.078-70.18-70.04c-7.81-7.795-7.81-20.434 0-28.23l80.14-79.97c7.81-7.794 20.476-7.794 28.287 0l70.185 70.04 42.165 42.078z"/><path fill="#AAC06A" d="M238.52 164.077L172.46 230l-15.948 15.914-70.185-70.04c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0l70.185 70.04-26.416 26.363z"/><path fill="#C8DD7F" d="M86.326 175.874c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0l28.02 27.964-108.43 108.2-28.02-27.964z"/><path fill="#707F39" d="M255.9 194.82l12.048-12.023c1.664-1.66 4.357-1.66 6.02 0 1.664 1.66 1.664 4.354 0 6.014l-12.046 12.03c-1.664 1.66-4.357 1.66-6.02 0-1.664-1.66-1.664-4.353 0-6.013z"/><path fill="#84994B" d="M213.736 152.742l12.047-12.022c1.664-1.66 4.357-1.66 6.02 0 1.664 1.66 1.664 4.354 0 6.014l-12.046 12.022c-1.664 1.66-4.357 1.66-6.02 0-1.664-1.66-1.664-4.355 0-6.014z"/><path fill="#AAC06A" d="M171.572 110.665l12.047-12.022c1.66-1.66 4.35-1.66 6.02 0 1.66 1.66 1.66 4.354 0 6.014l-12.05 12.023c-1.67 1.66-4.36 1.66-6.02 0-1.67-1.66-1.67-4.357 0-6.016z"/><path fill="#515B28" d="M307.1 179.793l42.164 42.077-9.264 9.245-50 49.897v-84.155l17.1-17.064z"/><path fill="#AA3131" d="M326.667 60H440c11.046 0 20 8.954 20 20v188.025H306.667V80c0-11.046 8.954-20 20-20z"/><path fill="#C93F3F" d="M326.667 50H440c11.046 0 20 8.954 20 20v138.52H306.667V70c0-11.046 8.954-20 20-20z"/><path fill="#E25C56" d="M326.667 50H440c11.046 0 20 8.954 20 20v79.013H306.667V70c0-11.046 8.954-20 20-20z"/><path fill="#FF9292" d="M306.667 50c0-11.046 8.954-20 20-20H440c11.046 0 20 8.954 20 20v39.506H306.667V50z"/><path fill="#6C3131" d="M413.14 242.523h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/><path fill="#AA3131" d="M413.14 183.016h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/><path fill="#C93F3F" d="M413.14 123.51h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/><path fill="#E25C56" d="M413.14 64.004h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/></svg></i>
+            Cores & Layout
+        </h2>
+        <p>Personalize as cores da sua loja</p>
+        <hr>
+
+        <!-- GERAL -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Cores</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4 class="space-title">Cor prim&aacute;ria</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: #000000;"></i></span>
+                                    <input name="color_one" placeholder="#000000" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="space-title">Cor secundária</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: #000000;"></i></span>
+                                    <input name="color_two" placeholder="#000000" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h4 class="space-title">Botões Background</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: #000000;"></i></span>
+                                    <input name="button_bg" placeholder="#000000" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="space-title">Botões Texto</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: #000000;"></i></span>
+                                    <input name="button_color" placeholder="#000000" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="space-title">Cor do bot&atilde;o Comprar</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: #000000;"></i></span>
+                                    <input name="button_call-to-action_bg" placeholder="#000000" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="space-title">Cor do texto do bot&atilde;o Comprar</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: #ffffff;"></i></span>
+                                    <input name="button_call-to-action_color" placeholder="#ffffff" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+    <div class="form-group">
+        <h2>
+            HOME: QCOLA COM A MAIOR VARIEDADE DE ADESIVOS E PAPÉIS DE PAREDE
+        </h2>
+        <p>Insira o id da categoria será listado as categorias filhas</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            ID
+                        </span>
+                        <input name="categoryID" id="categoryID" placeholder="" class="form-control" type="text">
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- REDES SOCIAIS -->
+    <div class="form-group">
+        <h2>
+            <i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 300.003 300.003"><path d="M150 0C67.164 0 0 67.16 0 150c0 82.838 67.163 150.003 150 150.003 82.844 0 150-67.165 150-150.003C300 67.16 232.844 0 150 0zm-28.776 152.124c0 3.208-.59 6.274-1.613 9.132l42.977 20.66c4.943-5.407 12.037-8.82 19.942-8.82 14.936 0 27.045 12.11 27.045 27.046 0 14.94-12.11 27.05-27.046 27.05-14.94 0-27.05-12.11-27.05-27.05 0-1.432.145-2.827.36-4.197l-45.738-21.99c-4.47 3.264-9.96 5.217-15.924 5.217-14.937 0-27.046-12.107-27.046-27.046 0-14.94 12.11-27.046 27.045-27.046 5.963 0 11.456 1.95 15.927 5.218l45.74-21.99c-.216-1.37-.362-2.766-.362-4.198 0-14.94 12.11-27.05 27.05-27.05 14.936 0 27.045 12.11 27.045 27.05 0 14.937-12.11 27.046-27.046 27.046-7.91 0-15-3.413-19.946-8.824l-42.97 20.66c1.024 2.858 1.61 5.924 1.61 9.132z" fill="#25b7d3"/></svg></i>
+            Redes Sociais
+        </h2>
+        <p>Insira o link referente ao perfil da sua loja nas redes sociais.</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <!--FACEBOOK-->
+                <div class="col-sm-6" style="margin: 5px 0;">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <svg id="facebook-logo" xmlns="http://www.w3.org/2000/svg" width="18.962" height="18.962" viewBox="0 0 18.962 18.962">
+                                <path id="Facebook__x28_alt_x29_" d="M18.962,3.16A3.275,3.275,0,0,0,15.8,0H3.16A3.275,3.275,0,0,0,0,3.16V15.8a3.275,3.275,0,0,0,3.16,3.16h6.32V11.8H7.163V8.638H9.481V7.407a3.889,3.889,0,0,1,3.555-4.036h2.555v3.16H13.036c-.28,0-.606.339-.606.848V8.638h3.16V11.8H12.43v7.163H15.8a3.275,3.275,0,0,0,3.16-3.16Z" transform="translate(0 0)" fill="#51a8b1"/>
+                            </svg>
+                        </span>
+                        <input name="facebook" id="facebook" placeholder="Ex: www.facebook.com/traytecnologia" class="form-control" type="text">
+                    </div>
+                </div>
+
+
+                <!--INSTAGRAM -->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg id="instagram" xmlns="http://www.w3.org/2000/svg" width="19.691" height="19.691" viewBox="0 0 19.691 19.691">
+                            <path id="Caminho_467" data-name="Caminho 467" d="M14.36,0H5.329A5.336,5.336,0,0,0,0,5.33v9.031a5.336,5.336,0,0,0,5.33,5.33H14.36a5.336,5.336,0,0,0,5.33-5.33V5.33A5.336,5.336,0,0,0,14.36,0ZM9.844,15.229a5.384,5.384,0,1,1,5.384-5.384A5.39,5.39,0,0,1,9.844,15.229Zm5.513-9.5A1.591,1.591,0,1,1,16.948,4.14,1.593,1.593,0,0,1,15.357,5.731Zm0,0" transform="translate(0.001 0)" fill="#51a8b1"/>
+                            <path id="Caminho_468" data-name="Caminho 468" d="M149.425,146.02a3.4,3.4,0,1,0,3.4,3.4A3.408,3.408,0,0,0,149.425,146.02Zm0,0" transform="translate(-139.579 -139.579)" fill="#51a8b1"/>
+                        </svg>
+                    </span>
+                    <input name="instagram" id="instagram" placeholder="Instagram" class="form-control" type="text">
+                </div>
+
+                <!--YOUTUBE -->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28.655" height="20.166" viewBox="0 0 28.655 20.166">
+                            <g id="youtube" transform="translate(0 -45.917)">
+                                <path id="XMLID_823_" d="M27.538,47.648c-1.034-1.23-2.944-1.731-6.591-1.731H7.708c-3.731,0-5.673.534-6.7,1.843-1,1.276-1,3.157-1,5.76V58.48c0,5.042,1.192,7.6,7.708,7.6H20.947c3.163,0,4.915-.443,6.049-1.528,1.163-1.113,1.659-2.93,1.659-6.075V53.52C28.655,50.775,28.577,48.883,27.538,47.648ZM18.4,56.685l-6.012,3.142a.924.924,0,0,1-1.352-.819V52.744a.924.924,0,0,1,1.35-.82l6.012,3.122a.924.924,0,0,1,0,1.64Z" transform="translate(0 0)" fill="#51a8b1"/>
+                            </g>
+                        </svg>          
+                    </span>
+                    <input name="youtube" id="youtube" placeholder="Youtube" class="form-control" type="text">
+                </div>
+
+                <!-- PINTEREST -->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg id="pinterest" xmlns="http://www.w3.org/2000/svg" width="20.166" height="20.166" viewBox="0 0 20.166 20.166">
+                            <g id="Grupo_215" data-name="Grupo 215">
+                                <path id="Caminho_469" data-name="Caminho 469" d="M15.108,0H5.041A5.065,5.065,0,0,0,0,5.057V15.124a5.061,5.061,0,0,0,5.041,5.041H15.108a5.068,5.068,0,0,0,5.057-5.057V5.057A5.068,5.068,0,0,0,15.108,0ZM11.091,12.884a2.16,2.16,0,0,1-1.825-.9s-.432,1.664-.528,1.985a7.882,7.882,0,0,1-1.344,2.369.1.1,0,0,1-.176-.048,8.316,8.316,0,0,1,.016-2.753c.144-.592.96-3.937.96-3.937a2.69,2.69,0,0,1-.24-1.136c0-1.072.64-1.873,1.44-1.873A.987.987,0,0,1,10.4,7.682a15.093,15.093,0,0,1-.656,2.561,1.13,1.13,0,0,0,1.184,1.392c1.408,0,2.369-1.761,2.369-3.841,0-1.584-1.1-2.769-3.1-2.769A3.489,3.489,0,0,0,6.514,8.483a2.073,2.073,0,0,0,.5,1.424c.144.16.16.224.112.4-.032.128-.112.448-.16.576a.251.251,0,0,1-.368.176A2.774,2.774,0,0,1,5.074,8.29c0-2.049,1.793-4.513,5.33-4.513,2.849,0,4.721,2,4.721,4.145C15.108,10.771,13.492,12.884,11.091,12.884Z" fill="#51a8b1"/>
+                            </g>
+                        </svg>      
+                    </span>
+                    <input name="pinterest" id="pinterest" placeholder="Pinterest" class="form-control" type="text">
+                </div>
+
+                <!--BLOGGER-->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg id="blogger-logo" xmlns="http://www.w3.org/2000/svg" width="20.166" height="20.166" viewBox="0 0 20.166 20.166">
+                            <g id="post-blogger">
+                                <path id="Caminho_474" data-name="Caminho 474" d="M18.149,0H2.017A2.023,2.023,0,0,0,0,2.017V18.149a2.023,2.023,0,0,0,2.017,2.017H18.149a2.023,2.023,0,0,0,2.017-2.017V2.017A2.023,2.023,0,0,0,18.149,0ZM14.116,7.058V8.066a.953.953,0,0,0,1.008,1.008.953.953,0,0,1,1.008,1.008v3.025a2.971,2.971,0,0,1-3.025,3.025H7.058a2.971,2.971,0,0,1-3.025-3.025V6.05A2.971,2.971,0,0,1,7.058,3.025h4.033A2.971,2.971,0,0,1,14.116,6.05ZM8.066,8.066h2.622A.953.953,0,0,0,11.7,7.058.953.953,0,0,0,10.688,6.05H8.066A.953.953,0,0,0,7.058,7.058.953.953,0,0,0,8.066,8.066ZM12.1,11.091H8.066a1.008,1.008,0,0,0,0,2.017H12.1a1.008,1.008,0,0,0,0-2.017Z" fill="#51a8b1"/>
+                            </g>
+                        </svg>                              
+                    </span>
+                    <input name="blogger" id="blogger" placeholder="www.blogger.com.br" class="form-control" type="text">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS -->
+    <div class="form-group">
+        <h2>
+            <i><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40" height="40" viewBox="0 0 554.625 554.625" style="enable-background:new 0 0 554.625 554.625;" xml:space="preserve"><g><g><path d="M267.75,153h95.625L248.625,19.125v114.75C248.625,145.35,258.188,153,267.75,153z"/><path d="M133.875,401.625V267.75c0-32.513,24.862-57.375,57.375-57.375h172.125v-38.25H267.75c-21.038,0-38.25-17.212-38.25-38.25V19.125H38.25C17.212,19.125,0,36.337,0,57.375V497.25c0,21.037,17.212,38.25,38.25,38.25h286.875c21.037,0,38.25-17.213,38.25-38.25V459H191.25C158.737,459,133.875,434.138,133.875,401.625z"/><path d="M516.375,229.5H191.25c-21.038,0-38.25,17.212-38.25,38.25v133.875c0,21.037,17.212,38.25,38.25,38.25h325.125c21.037,0,38.25-17.213,38.25-38.25V267.75C554.625,246.712,537.412,229.5,516.375,229.5z M229.5,382.5h19.125c11.475,0,19.125-7.65,19.125-19.125h19.125c0,21.037-17.213,38.25-38.25,38.25H229.5c-21.038,0-38.25-17.213-38.25-38.25V306c0-21.037,17.212-38.25,38.25-38.25h19.125c21.037,0,38.25,17.213,38.25,38.25H267.75c0-11.475-7.65-19.125-19.125-19.125H229.5c-11.475,0-19.125,7.65-19.125,19.125v57.375C210.375,374.85,218.025,382.5,229.5,382.5z M344.25,325.125h19.125c21.037,0,38.25,17.213,38.25,38.25s-17.213,38.25-38.25,38.25H344.25c-21.037,0-38.25-17.213-38.25-38.25l0,0h19.125l0,0c0,9.562,7.65,19.125,19.125,19.125h19.125c11.475,0,19.125-7.65,19.125-19.125s-9.562-19.125-19.125-19.125H344.25c-21.037,0-38.25-17.213-38.25-38.25s17.213-38.25,38.25-38.25h19.125c21.037,0,38.25,17.213,38.25,38.25H382.5c0-9.562-7.65-19.125-19.125-19.125H344.25c-11.475,0-19.125,7.65-19.125,19.125S334.688,325.125,344.25,325.125z M459,325.125h19.125c21.037,0,38.25,17.213,38.25,38.25s-17.213,38.25-38.25,38.25H459c-21.037,0-38.25-17.213-38.25-38.25l0,0h19.125l0,0c0,9.562,7.65,19.125,19.125,19.125h19.125c11.475,0,19.125-7.65,19.125-19.125s-9.562-19.125-19.125-19.125H459c-21.037,0-38.25-17.213-38.25-38.25s17.213-38.25,38.25-38.25h19.125c21.037,0,38.25,17.213,38.25,38.25H497.25c0-9.562-7.65-19.125-19.125-19.125H459c-11.475,0-19.125,7.65-19.125,19.125S449.438,325.125,459,325.125z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></i>
+            <b>CSS</b>
+        </h2>
+        <hr>
+
+        <div class="row row-social">
+            <div class="col-sm-12">
+                <h4>Adicione abaixo o CSS da sua loja</h4>
+                <br>
+                <textarea name="custom_css" class="form-control" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS -->
+    <div class="form-group">
+        <h2>
+            <b>Instagram</b>
+        </h2>
+        <hr>
+
+        <div class="row row-social">
+            <div class="col-sm-12">
+                <h4>Adicione o Token</h4>
+                <br>
+                <input type="text" name="instaToken" class="form-control">
+            </div>
+        </div>
+    </div>
+
+</fieldset>
+
+<script>
+
+    jQuery(".collapse-title").click(function(){
+        $(this).parents(".panel-heading").siblings(".collapse-content").slideToggle();
+    });
+
+    (function($){
+        $('.remove-img').click(function(){
+            $(this).parents('.file').find('img').remove();
+            $(this).parents('.file').find(':hidden').val('');
+            return false;
+        });
+    }(jQuery));
+
+    (function($){
+        var urlStore = document.querySelector('#store').value;
+
+        if(urlStore) {
+            var urlCatAPI = urlStore + '/web_api/categories/tree/';
+
+            $.get(urlCatAPI)
+                .then(function(data){ 
+                    var categories = filterCategories(data.Category); 
+                });
+        }
+
+        function filterCategories(data) {
+            var newData = data.map(function(item){
+                if( item.Category.children ) {
+                    item.Category.children = filterCategories(item.Category.children);
+                }
+                return item.Category;
+            });
+            return newData;
+        }
+
+    }(jQuery));
+
+</script>

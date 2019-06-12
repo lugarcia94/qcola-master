@@ -1,0 +1,43 @@
+{% if modifer == 'footer' %}
+<section class="newsletter newsletter--footer" data-tray-tst="newsletter_box">
+    <div class="newsletter__container">
+        <header class="newsletter__header">
+            <h1 class="newsletter__title">INSCREVA-SE NA NOSSA NEWSLETTER</h1>
+            <h2 class="newsletter__description">E receba ofertas exclusivas em primeira mão.</h2>
+        </header>
+        <div class="newsletter__main">
+            <form class="newsletter__form" action="{{ links.newsletter }}" method="post" name="newsletter" data-tray-tst="newsletter_form">
+                <div class="newsletter__box">
+                    <input class="newsletter__input" name="email" type="email" placeholder="{{ Translation('digitar_email') }}" data-tray-tst="newsletter_email" required>
+                </div>
+                <div class="newsletter__actions">
+                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="return__json"></div>
+</section>
+{% else %}
+<section class="newsletter newsletter--custom" data-tray-tst="newsletter_box">
+    <div class="newsletter__container">
+        <header class="newsletter__header">
+            <div class="newsletter__icon">
+                {% element 'snippets/icon' { 'name': 'newsletter', 'width': '81', 'height': '81'} %}
+            </div>
+            <h1 class="newsletter__title">Inscreva-se e receba ofertas exclusivas em primeira mão.</h1>
+        </header>
+        <div class="newsletter__main">
+            <form class="newsletter__form" action="{{ links.newsletter }}" method="post" name="newsletter" data-tray-tst="newsletter_form">
+                <div class="newsletter__box">
+                    <input class="newsletter__input" name="email" type="email" placeholder="{{ Translation('digitar_email') }}" data-tray-tst="newsletter_email" required>
+                </div>
+                <div class="newsletter__actions">
+                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="return__json"></div>
+</section>
+{% endif %}

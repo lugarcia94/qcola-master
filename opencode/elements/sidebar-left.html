@@ -1,0 +1,20 @@
+<div id="filter" class="page-catalog__left" aria-hidden="true">
+    <div class="page-catalog__filters">
+        <button aria-controls="filter" type="button" class="button button__close button__close--filter">
+            {% element 'snippets/icon' { 'name': 'close', 'width': '17', 'height': '17' } %}
+        </button>
+        <div class="page-catalog__filters-scroll">
+            {% if settings.compare %}
+                <a href="/loja/comparador.php?loja={{store.id}}&IdDep={{category.id}}" class="button-compare">{{ Translation("comparar_produto") }}</a>
+            {% endif %}
+            {% element 'filter' {
+                'brands': category.brands
+            } %}
+        </div>
+    </div>
+    <button aria-controls="filter" type="button" class="button button__mask button__mask--filter"></button>
+</div>
+
+<button aria-controls="filter" type="button" class="button button__filter">
+    <i class="fas fa-sliders-h"></i>
+</button>

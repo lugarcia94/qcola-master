@@ -1,0 +1,93 @@
+<footer class="footer">
+    
+        <div class="footer__container">
+            <div class="footer__row footer__row--news-socials">
+                {% element 'snippets/newsletter' { 'modifer': 'footer' } %}
+                {% if settings.facebook or 
+                    settings.twitter or 
+                    settings.whatsapp or
+                    settings.pinterest or 
+                    settings.youtube or 
+                    settings.instagram
+                %}
+    
+                <div class="footer__box footer__box--socials">
+                    {% element 'snippets/socials' %}
+                </div>
+                {% endif %}
+            </div>
+    
+            <div class="footer__row">
+                <div class="footer__box footer__box--institutional">
+                    <h3 class="footer__title title title--small">CATEGORIAS</h3>
+                    <div class="footer__content">
+                        {% element 'snippets/categories_list' %}
+                    </div>
+                </div>
+    
+                <div class="footer__box footer__box--help">
+                    <h3 class="footer__title title title--small">Ajuda e suporte</h3>
+                    <div class="footer__content">
+                        <ul class="footer__custom">
+                            <li class="footer__custom-item">
+                                <a class="footer__custom-link" title="Sobre a Empresa" href="/quem-somos">Sobre a Empresa</a>
+                            </li>
+                            <li class="footer__custom-item">
+                                <a class="footer__custom-link" title="Como Aplicar" href="/como-aplicar">Como Aplicar</a>
+                            </li>
+                            <li class="footer__custom-item">
+                                <a class="footer__custom-link" title="Regulamentos" href="/regulamentos">Regulamentos</a>
+                            </li>
+                            <li class="footer__custom-item">
+                                <a class="footer__custom-link" title="Trocas e Devoluç&otilde;es" href="/trocas-e-devolucoes">Trocas e Devoluç&otilde;es</a>
+                            </li>
+                            <li class="footer__custom-item">
+                                <a class="footer__custom-link" title="Fale Conosco" href="/contato">Fale Conosco</a>
+                            </li>
+                            <li class="footer__custom-item">
+                                <a class="footer__custom-link" title="Mapa do Site" href="/mapa-do-site">Mapa do Site</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="footer__box">
+                    <h3 class="footer__title title title--small">Central de Atendimento</h3>
+                    <div class="footer__content">
+                        {% element 'snippets/service-center' %}
+                    </div>
+                </div>
+                
+                <div class="footer__box">
+                    <div class="footer__payment">
+                        <h3 class="footer__title title title--small">Formas de Pagamento</h3>
+                        <div class="footer__content">
+                            {% element 'snippets/payments' %}
+                        </div>
+                    </div>
+                    
+                
+                    {% if seals.ebit or seals.hackersafe %}
+                        <div class="footer__security">
+                            <h3 class="footer__title title title--small">Selos de Seguran&ccedil;a</h3>
+                            <div class="footer__content">
+                                <ul class="footer__security-content">
+                                    {% if seals.ebit %}
+                                    <li class="seal-ebit pull-left">{{ seals.ebit }}</li>
+                                    {% endif %}
+                                    {% if seals.hackersafe %}
+                                    <li>{{ seals.hackersafe }}</li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            QCola Ind&uacute;stria e Com&eacute;rcio de Artigos Decorativos LTDA - CNPJ: 13.490.064/0001-60 - Rua Benedito Otoni, 278 - Vila R&eacute;, S&atilde;o Paulo / SP - CEP: 03667-010
+        </div>
+    </footer>
+    
