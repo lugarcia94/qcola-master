@@ -1135,7 +1135,7 @@ button,
 }
 .button__close {
   position: fixed;
-  left: calc(100% + 10px);
+  right: 10px;
   top: 10px;
   width: 45px;
   height: 45px;
@@ -5610,6 +5610,7 @@ body {
     max-height: 100%;
     max-width: calc(100% - 65px);
     background: #eee;
+    overflow-y: auto;
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
   }
@@ -5617,8 +5618,6 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-height: 0;
-    overflow-y: auto;
     background: #fff;
     border-radius: 0 0 4px 4px;
     padding: 0 10px;
