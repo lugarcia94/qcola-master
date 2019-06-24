@@ -58,7 +58,10 @@ export default class Minicart extends Component {
                     </Main>
                     <Footer>
                         Total: { currency(price) }
-                        <button type="button" onClick={ () => window.href = `/checkout/cart?session_id=${ hash  }&store_id=${ store }#carrinho` }>Finalizar a Compra</button>
+                        <button type="button" onClick={ () => {
+                            console.log('sss');
+                            window.location.href = `/checkout/cart?session_id=${ hash  }&store_id=${ store }#carrinho`;
+                        } }>Finalizar a Compra</button>
                     </Footer>
                 </React.Fragment> : <React.Fragment> 
                     <Empty>
