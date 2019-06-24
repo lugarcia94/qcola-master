@@ -14,7 +14,8 @@ function buttonMoreLess() {
             .before(less)
             .after(more);
 
-        more.click(() => {
+        more.click((evt) => {
+            evt.preventDefault();
             let value = parseInt(quantity.val());
 
             if(value) {
@@ -22,7 +23,8 @@ function buttonMoreLess() {
             }
         });
 
-        less.click(() => {
+        less.click((evt) => {
+            evt.preventDefault();
             let value = parseInt(quantity.val());
 
             if(value && (value - 1) > 0) {
