@@ -52,6 +52,10 @@
         
 
         <main class="main">
+            {% if pages.current in ['home'] %}
+                {% element 'snippets/lightbox' %}
+            {% endif %}
+            
             <div class="main__container">
                 {% element 'snippets/banner' %}
                 {% if pages.current in ['home'] %}
@@ -133,6 +137,7 @@
     <script async type="text/javascript" src="{{ asset('js/quickview.js') }}"></script>
     <script async type="text/javascript" src="{{ asset('js/minicart.js') }}"></script>
     <script defer type="text/javascript" src="{{ asset('js/qcola.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
     <script type="application/ld+json">
         {
