@@ -29,7 +29,22 @@
                     </div>
                 {% endif %}
                 
-                <h1 class="page-catalog__title title title--big">{{ category.name }}</h1> 
+                <h1 class="page-catalog__title title title--big">
+                    {% if category.parent == 1 %}
+                    Papel de Parede 
+                    {% elseif category.parent == 3 %}
+                        Adesivos de Parede 
+                    {% elseif category.parent == 87 %}
+                        Espelhos  
+                    {% elseif category.parent == 269 %}
+                        Faixas de Parede   
+                    {% elseif category.parent == 157 %}
+                        Placas Decorativas 
+                    {% elseif category.parent == 317 %}
+                        Relógios Decorativos 
+                    {% endif %}
+                    {{ category.name }}
+                </h1> 
 
                 <div class="page-catalog__toolbar page-catalog__toolbar--top">
                     {% element 'snippets/toolbar' {

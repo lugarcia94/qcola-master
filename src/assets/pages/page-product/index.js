@@ -90,10 +90,10 @@ calculatorForm.submit(function(evt){
         let HTML = `<strong>0,60 x 1,50 metros</strong>`;
         let variant = 1;
 
-        if( cHeight > 1.5 && cHeight <= 2.5 ){
+        if( cHeight > 1.45 && cHeight <= 2.5 ){
             HTML = `<strong>0,60 x 2,50 metros</strong>`;
             variant = 2;
-        } else if(cHeight > 2.5 && cHeight <= 3) {
+        } else if(cHeight > 2.45 && cHeight <= 3) {
             HTML = `<strong>0,60 x 3,00 metros</strong>`;
             variant = 3;
         }
@@ -106,7 +106,7 @@ calculatorForm.submit(function(evt){
             }, false);
             
         } else {
-            const err = '<div class="err"> Cada rolo mede <strong>3m de largura</strong>, para larguras maiores entre em  <a href="/contato">contato</a>.</div>';
+            const err = '<div class="err"> Temos rolos com até <strong>3 metros de altura</strong>, para tamanhos maiores entre em  <a href="/contato">contato</a>.</div>';
             resultHTML.html(err);
             $(`.lista_cor_variacao li:nth-child(1)`).trigger('click');
             document.addEventListener('TRAY:VARIANT',() => {

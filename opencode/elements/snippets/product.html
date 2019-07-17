@@ -1,14 +1,24 @@
 <article itemscope itemtype="http://schema.org/Product" class="product {% if view == 'page-product' %} product--page-product {% endif %}">
     {% element 'schema/product' {'product': product} %}
-    <div class="product__header">
+    <div class="product__header">        
         <figure class="product__figure">
         {% if product.images %}
+            <div class="product__bandeiras">
+                    {% set price = product.price_offer > 0 ? product.price_offer : product.price %}
+                    {% if product.price_offer > 0 and product.show_price %}
+                        {% set porcentagemDesconto = 100 - ( product.price_offer / product.price ) * 100 %}
+                        {% if porcentagemDesconto < 100 %}
+                                <span class="product__discount">-{{ porcentagemDesconto|number_format }}%</span>
+                        {% endif %}  
+                    {% endif %}
+            </div>            
             <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" title="{{ product.name }}" data-tray-tst="vitrine_produto_link_imagem">
                 {% if product.images|length > 1 %}
                 <img class="product__image lazy" data-original="{{ product.images[0].large }}" src="{{ asset('img/loading-banner.svg') }}" alt="{{ product.name }}" title="{{ product.name }}" width="230" height="230" layout="responsive">
                 <img class="product__image lazy"  data-original="{{ product.images[1].large }}" src="{{ asset('img/loading-banner.svg') }}"  alt="{{ product.name }}" title="{{ product.name }}" width="230" height="230" layout="responsive">
                 {% else %}
                 <img class="product__image lazy" data-original="{{ product.images[0].large }}" src="{{ asset('img/loading-banner.svg') }}" alt="{{ product.name }}" title="{{ product.name }}" width="230" height="230" layout="responsive">
+                
                 {% endif %}
             </a>
         {% else %}

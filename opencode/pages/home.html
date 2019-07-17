@@ -10,7 +10,7 @@
     'filter': showAvailable,
     'limit': limitProducts,
     'order': {'price': 'asc'},
-    'categories': [1]
+    'categories': [135]
 }) %}   
 {% element 'showcase' {
     "products": products,
@@ -38,7 +38,7 @@
 {% set products = Products({
     'filter': showAvailable,
     'limit': limitProducts,
-    'order': {'quantity_sold': 'desc'}
+    'order': {'id': 'desc'}
 }) %} 
 {% element 'showcase' {
     "products": products,

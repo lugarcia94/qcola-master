@@ -182,11 +182,12 @@
                                     </h3>
                                 </div>
                                 <div data-fixed="false" aria-hidden="true" id="tab-observacoes" class="product-tabs__content">
-                                    <div class="board">
-                                        É de extrema importância que o cliente saiba a metragem do local (largura x altura) antes de adquirir o material, o cálculo deve considerar vãos, portas e janelas. <br />
-                                        Rolos de diferentes tamanhos pode não dar encaixe na estampa, por esse motivo recomendamos comprar rolos do mesmo tamanho para aplicação na mesma parede.<br />
-                                        <strong>As cores do produto real podem apresentar diferença das cores visualizadas em seu monitor.</strong><br />As cores do Papel de Parede podem variar de acordo com o lote de fabricação devido à vários fatores, por esse motivo compre a quantidade correta, pois não será possível produzir lotes diferentes na mesma tonalidade de cores.<br />
-                                        <img alt="Observações" src="https://static3.tcdn.com.br/img/editor/up/580806/Tarja_atencao.jpg" class="img_observacoes" />
+                                    <div class="board_yellow">
+                                        É de extrema importância que o cliente saiba a metragem do local (largura x altura) antes de adquirir o material, o cálculo deve considerar vãos, portas e janelas. <br /><br />
+                                        - Há uma variação no padrão de repetição dentre as opções dos rolos, por isso, recomendamos que para uma mesma parede sejam adquiridos rolos de uma mesma medida. Todos os rolos de 2.50x0.60m ou todos os rolos de 3.00x0.60m, por exemplo. Rolos de medidas diferentes, mesmo adquiridos em um único pedido, também podem apresentar variação de tamanho e cor pois são fabricados em lotes diferentes.<br /><br />
+                                        - Nunca aplicar os rolos em locais úmidos, com infiltração, textura, ou imperfeições. A parede tem que estar totalmente lisa e com pintura fosca. Em caso de tinta fresca espere no mínimo 2 semanas após a pintura para aplicação do Papel de Parede.<br /><br />
+                                        <strong>- As cores do produto real podem apresentar diferença das cores visualizadas em seu monitor.</strong><br /><br />
+                                        - As cores do Papel de Parede podem variar de acordo com o lote de fabricação devido à vários fatores, por esse motivo compre a quantidade correta, pois não será possível produzir lotes diferentes na mesma tonalidade de cores.<br /><br />
                                     </div>
                                 </div>
             
@@ -198,8 +199,8 @@
                                 </div>
                                 <div data-fixed="false" aria-hidden="true" id="tab-aplicar" class="product-tabs__content">
                                     <div class="board">
-                                        Antes de aplicar os papeis de parede é necessário fazer a limpeza do local com um pano úmido, o ambiente tem que estar totalmente limpo.<br />
-                                        <p class="desc_video"><iframe src="https://www.youtube.com/embed/AU_oaOSYT7U?rel=0" frameborder="0" allowfullscreen></iframe></p>
+                                        Antes de aplicar os papeis de parede é necessário fazer a limpeza do local com um pano úmido, o ambiente tem que estar totalmente limpo.<br /><br />
+                                        <div class="desc_video" style="text-align: center"></p><iframe width="560" height="315" src="https://www.youtube.com/embed/BxnP8J_D0lo" frameborder="0" allowfullscreen></iframe></div>
                                     </div>
                                 </div>
             
@@ -213,7 +214,7 @@
                                     <div class="board">
                                         Dê mais vida aos ambientes, como quartos, sala, hall, corredor, banheiro, cozinha e etc.<br />
                                         Nosso Papel de Parede pode ser aplicado em qualquer superfície lisa, como: paredes (sempre pintadas), portas, espelhos, vidros, móveis, mármore e etc. Sempre em locais limpos e livres de poeira ou qualquer tipo de sedimento.<br />
-                                        Nunca aplicar em locais úmidos, com infiltração, textura, ou imperfeições. Em caso de tinta fresca espere no mínimo 2 semanas após a pintura para aplicação do Papel de Parede.
+                                        Nunca aplicar os rolos em locais úmidos, com infiltração, textura, ou imperfeições. A parede tem que estar totalmente lisa e com pintura fosca. Em caso de tinta fresca espere no mínimo 2 semanas após a pintura para aplicação do Papel de Parede.
                                     </div>
                                 </div>
             
@@ -258,12 +259,25 @@
                                         Antes de aplicar os papéis de parede, abra um dos rolos para ver a qualidade de impressão e cor.<br />
                                         Caso compre mais de 1 rolo, abra todos para verificação (conferindo se a tonalidade de cor entre os rolos estão iguais e verificando se as emendas encaixam).<br />
                                         Após a verificação, posicione um rolo na parede e prenda com fita crepe, dê uma distância de 2 metros para ver se está de seu agrado e só comece a aplicar se estiver tudo ok.<br />
-                                        Não damos garantia se o produto já estiver todo aplicado na parede e se não foi feito a sobreposição nas emendas, verifique atentamente todos os rolos antes de aplicar.<br />
+                                        Não damos garantia se o produto já estiver todo aplicado na parede e se não foi feito a sobreposição nas emendas, verifique atentamente todos os rolos antes de aplicar. Também não damos garantia se não for seguido as observações de aplicação do produto.<br />
                                     </div>
                                 </div>
                             {% endif %}
                         {% endfor %}
                     {% endif %}
+
+                    {% if category.name == 'Outlet' %}                          
+                            <div data-fixed="false" aria-hidden="true" id="tab-aplicar" class="product-tabs__content">
+                                <div class="board">
+                                        <h3 class="product-tabs__title title title--medium">                                            
+                                            <span>Como Aplicar Papel de Parede</span>
+                                        </h3>
+                                    Antes de aplicar os papeis de parede é necessário fazer a limpeza do local com um pano úmido, o ambiente tem que estar totalmente limpo.<br /><br />
+                                    <div class="desc_video" style="text-align: center"></p><iframe width="560" height="315" src="https://www.youtube.com/embed/BxnP8J_D0lo" frameborder="0" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                    {% endif %}  
+
                 {% endfor %}
             
             <!-- FIM Descrição -->
