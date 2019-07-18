@@ -58,3 +58,31 @@ if ($('.lightbox-out').length > 0) {
         $('.lightbox-out').removeClass("hidden");
     }
 }
+
+$(".lightbox__form").submit(function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr("action");
+    console.log(formData, url);
+    var link = "form/insert";
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: formData ,
+        processData: false,
+        contentType: false
+    }).done(function (data) {
+        var htmlReturn = "Cadastro Efetuado com Sucesso!";
+        var htmlReturn2 = "Utilize o cupom abaixo na finaliza&#231&#227o de seu pedido";
+        var htmlReturn3 = "<p>cupom: QCOLA10</p>";
+
+        $('.lightbox__body--header p').html(htmlReturn2);
+        $(".lightbox__body--title").html(htmlReturn);
+        $('.lightbox__body--footer').html(htmlReturn3);
+        $('.lightbox__body--title').addClass('on__cupom');
+        $('.advertence').show();
+    });
+    $(this)[0].reset();
+    $(".conteudo-light-textos").addClass("hide");
+    
+});

@@ -13,11 +13,14 @@
             </div>
             
             <div class="lightbox__body--footer">
-                <form action="{{ links.newsletter }}" class="newsletter__form lightbox__form" method="POST">
+                <form action="{{ links.newsletter }}" class="lightbox__form" method="POST">
                     <input type="hidden" name="loja" value="{{ store.id }}">
                     <input name="email" type="text" id="news-email" class="newsletter__email newsletter__input" placeholder="Digite aqui o seu e-mail.">
                     <button type="input" class="newsletter__button">Cadastrar</button>
                 </form>
+            </div>
+            <div class="advertence">
+                * cupom válido somente hoje!
             </div>
         </div> 
     </div>
