@@ -313,11 +313,20 @@
 
 .lightbox__close 
     position: absolute
-    right: 0
+    right: 50px
     font-size: 30px
     color: #49bfc1
     font-weight: 700
-    cursor pointer
+    top: 30px
+    cursor: pointer
+    background: #fff
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 5px solid
+
+    @media(max-width: 375px)
+        right 20px
 
 .on__cupom
     font-size: 35px!important

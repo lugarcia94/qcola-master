@@ -1,4 +1,4 @@
-{% set limitProducts = 8 %}
+{% set limitProducts = 10 %}
 
 {% if settings.limitProducts %}
     {% set limitProducts = settings.limitProducts %}    
@@ -15,7 +15,7 @@
 {% element 'showcase' {
     "products": products,
     "showcaseTitle": "Outlet",
-    "carousel": "true"
+    "carousel": "false"
 } %}
 
 <div class="banner banner--showcase">
@@ -30,7 +30,7 @@
 {% element 'showcase' {
     "products": products,
     "showcaseTitle": "Mais Vendidos",
-    "carousel": "true"
+    "carousel": "false"
 } %}
 
 {% element 'snippets/newsletter' %}
@@ -43,7 +43,7 @@
 {% element 'showcase' {
     "products": products,
     "showcaseTitle": "Novos Produtos",
-    "carousel": "true"
+    "carousel": "false"
 } %}
 
 {% if banner.bottom %}
