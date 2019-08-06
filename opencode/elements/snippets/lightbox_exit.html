@@ -1,0 +1,27 @@
+<div class="hidden-xs lightbox__exit hidden">
+    <div class="lightbox__exit lightbox__exit--wrapper">
+        <div class="lightbox__exit lightbox__exit--body">
+            <span class="lightbox__close">
+                X
+            </span>
+            <div class="lightbox__exit lightbox__exit--top">
+                <span class="lightbox__exit lightbox__exit--title">Antes de você ir embora</span>
+                <span class="lightbox__exit lightbox__exit--subtitle">Dê uma olhada nesses produtos que preparamos
+                    especialmente para você:</span>
+            </div>
+            <section class="lightbox-body--products">
+                {% set products = Products({
+                            'filter': 'available',
+                            'limit': 4,
+                            'order': 'rand'
+                            }) %}
+
+                {% element 'showcase' {
+                            "products": products,
+                            "carousel": "false"
+                            } %}
+            </section>
+        </div>
+
+    </div>
+</div>
