@@ -74,7 +74,7 @@ $(".lightbox__form").submit(function (e) {
     }).done(function (data) {
         var htmlReturn = "Cadastro Efetuado com Sucesso!";
         var htmlReturn2 = "Utilize o cupom abaixo na finaliza&#231&#227o de seu pedido";
-        var htmlReturn3 = "<p>cupom: QCOLA10</p>";
+        var htmlReturn3 = "<p>cupom: QCOLA5</p>";
 
         $('.lightbox__body--header p').html(htmlReturn2);
         $(".lightbox__body--title").html(htmlReturn);
