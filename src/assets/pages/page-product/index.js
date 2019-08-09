@@ -93,7 +93,7 @@ calculatorForm.submit(function (evt) {
             let HTML = `<strong>0,60 x 1,00 metros</strong>`;
             let variant = 1;
 
-            if (cHeight > 1.00 && cHeight <= 2.45) {
+            if (cHeight > 1.00 && cHeight <= 1.45) {
                 HTML = `<strong>0,60 x 1,50 metros</strong>`;
                 variant = 2;
             } else if (cHeight > 1.45 && cHeight <= 2.5) {
